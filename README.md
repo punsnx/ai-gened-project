@@ -2,12 +2,19 @@
 
 created by 6610402230 Sirisuk Tharntham
 
-launch instrucution 
+launch instrucution
+execute command in the root directory
+ 
 `
 cd backend && make dev
 `
 
-or launch in the browser via
+next launch in the browser via
+`
+http://localhost:8000/
+`
+
+for deployed server please visit at
 `
 https://pm-ai.punsnx.com/
 `
