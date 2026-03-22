@@ -7,7 +7,7 @@ import torch
 from PIL import Image
 from torchvision import models, transforms
 
-CLASS_NAMES_DEFAULT = ["drinking_water", "food", "nothing"]
+CLASS_NAMES_DEFAULT = ['nothing', 'food', 'drinking_water']
 MODEL_PATH = Path(__file__).resolve().parents[1] / "model" / "food-detector-model.pth"
 
 _device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -18,7 +18,7 @@ _class_names: list[str] = CLASS_NAMES_DEFAULT.copy()
 def _build_model(num_classes: int) -> torch.nn.Module:
     model = models.resnet18(weights=None)
     in_features = model.fc.in_features
-    model.fc = torch.nn.Sequential(torch.nn.Dropout(0.2), torch.nn.Linear(in_features, num_classes))
+    model.fc = torch.nn.Sequential(torch.nn.Dropout(0.25), torch.nn.Linear(in_features, num_classes))
     return model.to(_device)
 
 
