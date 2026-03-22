@@ -6,3 +6,8 @@ launch instrucution
 `
 cd backend && make dev
 `
+
+or launch in the browser via
+`
+https://pm-ai.punsnx.com/
+`
