@@ -1,6 +1,6 @@
 PYTHON ?= python
 PIP ?= pip
-IMAGE ?= pm-ai-backend
+IMAGE ?= ai-gened-backend
 PORT ?= 8000
 
 .PHONY: install dev build run
